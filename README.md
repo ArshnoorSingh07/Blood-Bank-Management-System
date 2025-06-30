@@ -82,7 +82,6 @@ Built as part of an academic project (UCS310), this system combines a normalized
 3. **Backend Setup**:
    - The backend can be developed using any stack that handles HTTP requests. In this project:
      - API endpoints such as `/api/donate`, `/api/request`, and `/api/donors` are assumed to be handled using a backend server (Node.js or similar).
-     - You can use [Express.js](https://expressjs.com/) to route frontend form submissions to the MySQL database.
      - The MySQL server is managed using **phpMyAdmin**, a web-based interface included with XAMPP.
        - Access it via `http://localhost/phpmyadmin`
        - Ensure the database `bloodbank` is imported correctly.

@@ -108,6 +108,7 @@ Built as part of an academic project (UCS310), this system combines a normalized
 
 - **Arshnoor Singh**
 - **Prigya Goyal**
+- **Harshpreet**
 
 ---
 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Donor List</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Donors</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="request.html">Request</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <table id="donorTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Blood Group</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <script>
+    async function loadDonors() {
+      try {
+        const res = await fetch("http://localhost:5000/api/donors");
+        const donors = await res.json();
+
+        const tbody = document.querySelector("#donorTable tbody");
+        donors.forEach(donor => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${donor.id}</td>
+            <td>${donor.name}</td>
+            <td>${donor.email}</td>
+            <td>${donor.Phone_number}</td>
+            <td>${donor.blood_group}</td>
+          `;
+          tbody.appendChild(row);
+        });
+      } catch (err) {
+        console.error("Error loading donors:", err);
+        alert("Failed to load donors.");
+      }
+    }
+
+    loadDonors();
+  </script>
+</body>
+</html>

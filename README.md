@@ -41,16 +41,18 @@ Built as part of an academic project (UCS310), this system combines a normalized
 ```
 ├── public/                 # Frontend (HTML/CSS/JS)
 │   ├── index.html
-│   ├── donate.html
-│   ├── donors.html
-│   ├── inventory.html
-│   ├── request.html
-│   └── styles.css
-├── donate.html             # Blood donation form
-├── request.html            # Blood request form
-├── donors.html             # List of registered donors
-├── inventory.html          # Blood stock display
-├── styles.css              # Styling for all pages
+│   ├── donate.html         # Blood donation form
+│   ├── donors.html         # List of registered donors   
+│   ├── inventory.html      # Blood stock display
+│   ├── request.html        # Blood request form
+│   └── styles.css          # Styling for all pages
+├── Backend/                
+│   ├── routes/
+│      ├── donate.js
+│      ├── donors.js       
+│      ├── request.js
+│   ├── db.js
+│   ├── server.js                 
 ├── complete_bloodbank_with_inserts.sql # Database schema + sample data
 ├── Blood Bank Management Final.pdf     # Final project documentation
 ```
